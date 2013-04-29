@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Upload Simples</h2>
+
+
+@Html.ValidationSummary()
+
+<form method="POST" action="./" enctype="multipart/form-data">
+    <input type="file" value="" id="arquivo" name="arquivo" />
+    <input type="submit" value="Enviar" />
+</form>
+
+@if (ViewBag.imagem != null)
+{
+    <img src="@ViewBag.imagem" alt="" />  
+}
+
+
+
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/jqueryval")
+}
